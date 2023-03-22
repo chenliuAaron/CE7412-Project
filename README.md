@@ -1,1 +1,1 @@
-# CE7412-Project
+# CE7412-Project: Classifying DNA Sequences with RNN-based Models
