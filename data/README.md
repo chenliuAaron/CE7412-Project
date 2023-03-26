@@ -10,3 +10,4 @@ Unzip the .zip files in this data folder to have .fasta files. The reason is tha
 | Dengue-4 | 3587 | 3550.449 |
 
 ## Step 2: 
+Call the function k_mer_enc in utils.py to apply k_mer encoding to the raw DNA sequences.
