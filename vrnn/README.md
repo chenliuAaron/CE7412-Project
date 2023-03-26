@@ -16,4 +16,4 @@ The original code is available at [Link]( https://github.com/jych/nips2015_vrnn 
 
 ## Acknowledgements
 
-This repo is largely adapted from the repo [Link]( https://github.com/hjf1997/VRNN ). The repo owner reimplemented the vrnn with PyTorch to get rid of the annoying Theano and TensorFlow v1.14 legacy code. The version incompatibility issues can not always be solved by their equivalents in TensorFlow v2.
+This repo is largely adapted from the repo [Link]( https://github.com/hjf1997/VRNN ). The repo owner reimplemented the vrnn with PyTorch to get rid of the annoying Theano and TensorFlow v1.14 legacy code. This is important since the version incompatibility issues can not always be solved by using their equivalents in TensorFlow v2.
