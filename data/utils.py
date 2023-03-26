@@ -40,12 +40,13 @@ def k_mer_enc(filename: "filename without the .fasta suffix", k: "predefined k f
         # dump encodings into .pkl files
         with open(filename + '.pkl', 'wb') as pkfile:
             pickle.dump(encodings, pkfile)
-        # load encodings from .pkl files
-        with open(filename + '.pkl', 'rb') as pkfile:
-            encodings = pickle.load(pkfile)
+        # load encodings from .pkl files (not needed here)
+        # with open(filename + '.pkl', 'rb') as pkfile:
+        #     encodings = pickle.load(pkfile)
 
 
 if __name__ == '__main__':
-    # filenames = ['Dengue-4-sequences', 'Ebola-sequences', 'hepatitis-C-3a-sequences',
-    #              'influenza-A-sequences', 'mers-sequences', 'SARS-CoV-2-sequences']
-    k_mer_enc('Dengue-4-sequences', 4)
+    filenames = ['Dengue-4-sequences', 'Ebola-sequences', 'hepatitis-C-3a-sequences',
+                 'influenza-A-sequences', 'mers-sequences', 'SARS-CoV-2-sequences']
+    for filename in filenames:
+        k_mer_enc(filename, 4)
