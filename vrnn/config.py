@@ -1,7 +1,3 @@
-# implement by p0werHu
-# time 11/18/2019
-
-
 class Config(object):
 
     def __init__(self):
