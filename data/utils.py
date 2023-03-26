@@ -48,4 +48,4 @@ def k_mer_enc(filename: "filename without the .fasta suffix", k: "predefined k f
 if __name__ == '__main__':
     # filenames = ['Dengue-4-sequences', 'Ebola-sequences', 'hepatitis-C-3a-sequences',
     #              'influenza-A-sequences', 'mers-sequences', 'SARS-CoV-2-sequences']
-    k_mer_enc('Dengue-4-sequences', 8)
+    k_mer_enc('Dengue-4-sequences', 4)
