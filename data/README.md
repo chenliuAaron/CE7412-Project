@@ -3,8 +3,8 @@ Unzip the .zip files in this data folder to have .fasta files. The reason is tha
 | Virus Species | Count of Sequences | Average Lengths |
 |----------|:-------------:|------:|
 | MERS | 1633 | 14883.86 |
-| SARS-CoV-2 | 3669 | 1582.98 |
-| Influenza-A | 3331 | 1134.391 |
+| SARS-CoV-2 | 4752 | 29716.72 |
+| Influenza-A | 3669 | 1582.98 |
 | Hepatitis-C-3a | 3331 | 1134.391 |
 | Ebola | 4001 | 16652.26 |
 | Dengue-4 | 3587 | 3550.449 |
