@@ -1,5 +1,3 @@
-## Step 1: Unzip the ZIP files.
+## The data/raw folder contains unpreprocessed raw data which are NOT required to train deep learning models.
 
-
-## Step 2: 
-Call the function k_mer_enc in utils.py to apply k_mer encoding to the raw DNA sequences.
+## The data/training, data/validation, and data/test folders contain preprocessed data for training, validation, and test, respectively. Please see README.md in each folder to learn more.
