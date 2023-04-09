@@ -1,0 +1,1 @@
+This folder contains the zipped training files for all 6 virus types. Each files contains 2400 training samples which may include duplicates from upsampling. Each of the 2400 samples contains a variable length of integers ranging from 0 (inclusive) to 4 ^ 4 (not inclusive).
