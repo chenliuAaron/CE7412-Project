@@ -59,7 +59,8 @@ def create_datasets(filename: "filename without .pkl suffix", numsamples: "numbe
     with open(filename + '_training.pkl', 'wb') as pkfile:
         pickle.dump(encodings[0: int(len(encodings) * training_split)], pkfile)
     with open(filename + '_validation.pkl', 'wb') as pkfile:
-        pickle.dump(encodings[int(len(encodings) * training_split): int(len(encodings) * (training_split + validation_split))], pkfile)
+        pickle.dump(encodings[int(len(encodings) * training_split):
+                              int(len(encodings) * (training_split + validation_split))], pkfile)
     with open(filename + '_test.pkl', 'wb') as pkfile:
         pickle.dump(encodings[int(len(encodings) * (training_split + validation_split)):], pkfile)
 
