@@ -1,4 +1,4 @@
-def k_mer_enc(filename: "filename without the .fasta suffix", k: "predefined k for k-mer encoding"):
+def k_mer_enc(filename: "filename without .fasta suffix", k: "k for k-mer encoding"):
     with open(filename + '.fasta', 'r') as file:
         # read DNA sequences into seqs
         seqs = []
@@ -40,9 +40,28 @@ def k_mer_enc(filename: "filename without the .fasta suffix", k: "predefined k f
         # dump encodings into .pkl files
         with open(filename + '.pkl', 'wb') as pkfile:
             pickle.dump(encodings, pkfile)
-        # load encodings from .pkl files (not needed here)
-        # with open(filename + '.pkl', 'rb') as pkfile:
-        #     encodings = pickle.load(pkfile)
+
+
+def create_datasets(filename: "filename without .pkl suffix", numsamples: "number of samples wanted",
+                    training_split=0.8, validation_split=0.1, test_split=0.1):
+    import pickle
+    # load encodings from .pkl files
+    with open(filename + '.pkl', 'rb') as pkfile:
+        encodings = pickle.load(pkfile)
+
+    import numpy as np
+    if len(encodings) < numsamples:
+        encodings = np.random.choice(encodings, numsamples, replace=True)
+    else:
+        encodings = np.random.choice(encodings, numsamples, replace=False)
+
+    # dump datasets into .pkl files
+    with open(filename + '_training.pkl', 'wb') as pkfile:
+        pickle.dump(encodings[0: int(len(encodings) * training_split)], pkfile)
+    with open(filename + '_validation.pkl', 'wb') as pkfile:
+        pickle.dump(encodings[int(len(encodings) * training_split): int(len(encodings) * (training_split + validation_split))], pkfile)
+    with open(filename + '_test.pkl', 'wb') as pkfile:
+        pickle.dump(encodings[int(len(encodings) * (training_split + validation_split)):], pkfile)
 
 
 if __name__ == '__main__':
@@ -50,3 +69,4 @@ if __name__ == '__main__':
                  'influenza-A-sequences', 'mers-sequences', 'SARS-CoV-2-sequences']
     for filename in filenames:
         k_mer_enc(filename, 4)
+        create_datasets(filename, numsamples=3000)
